@@ -3,8 +3,16 @@
 
 int max_of(int count, ...) {
   va_list ap;
+  int max = 0;
   va_start(ap, count);
-  
+  for (int i = 0; i < count; i++){
+    int c = va_arg(ap, int);
+    if (c > max) {
+      max = c;
+    }
+  }
+  va_end(ap);
+  return max;
 }
 int main() {
   printf("%d\n", max_of(4, 5, 12, 3, 9));
