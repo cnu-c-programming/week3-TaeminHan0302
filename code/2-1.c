@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 void increment(int x) {
   ++x;
